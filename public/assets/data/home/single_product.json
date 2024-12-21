@@ -4,9 +4,7 @@
         "brand": {
             "status": true,
             "brand_ids": [
-                33,
-                32,
-                31
+                33
             ]
         },
         "services": {
@@ -44,37 +42,37 @@
                 "status": true,
                 "image_url": "/images/theme/single_product/mobile-watch.png",
                 "redirect_link": {
-                    "link": "time-sphere",
-                    "link_type": "collection"
+                    "link": "https://www.amazon.in/SOS-ELECTRONICS-Type-c-rapid-charge/dp/B0CV7WY5QX",
+                    "link_type": "external_url"
                 }
             },
             "banner_2": {
                 "status": true,
                 "image_url": "/images/theme/single_product/activity.png",
                 "redirect_link": {
-                    "link": "time-sphere",
-                    "link_type": "collection"
+                    "link": "https://www.amazon.in/SOS-ELECTRONICS-Type-c-rapid-charge/dp/B0CV7WY5QX",
+                    "link_type": "external_url"
                 }
             },
             "banner_3": {
                 "status": true,
                 "image_url": "/images/theme/single_product/text.png",
                 "redirect_link": {
-                    "link": "time-sphere",
-                    "link_type": "collection"
+                    "link": "https://www.amazon.in/SOS-ELECTRONICS-Type-c-rapid-charge/dp/B0CV7WY5QX",
+                    "link_type": "external_url"
                 }
             }
         },
         "home_banner": {
-            "title": "SOS ELECTRONICS INDIA",
+            "title": "SOS ELECTRONICS INDIA India's own brand",
             "status": true,
             "button_text": "Shop Now",
-            "description": "A versatile and innovative device that seamlessly integrates with your daily life. With features like fitness tracking, heart rate monitoring, and sleep analysis.",
+            "description": "SOS Electronics India is a trusted brand specializing in high-quality mobile accessories designed to enhance your digital lifestyle. From durable fast-charging cables to high-speed data transfer solutions, we offer a wide range of products tailored to meet your everyday needs. With a commitment to innovation and customer satisfaction, SOS Electronics India ensures premium quality, reliability, and performance in every product. Elevate your mobile experience with accessories that combine style, functionality, and durability",
             "show_button": true,
             "banner_image": "/images/theme/single_product/1.png",
             "redirect_link": {
-                "link": "time-sphere",
-                "link_type": "collection"
+                "link": "https://www.amazon.in/SOS-ELECTRONICS-Type-c-rapid-charge/dp/B0CV7WY5QX",
+                "link_type": "external_url"
             }
         },
         "testimonial": {
@@ -83,31 +81,31 @@
             "banners": [
                 {
                     "name": "Albert Flores",
-                    "review": "I've tried several smartwatches, but this one stands out for its exceptional performance and design. The seamless connectivity with my smartphone ensures I receive all important notifications without any delays.",
+                    "review": "I've tried several smartwatches, but SOS Electronics India's watch one stands out for its exceptional performance and design. The seamless connectivity with my smartphone ensures I receive all important notifications without any delays.",
                     "status": true,
                     "image_url": "/images/theme/single_product/testimonials.png"
                 },
                 {
                     "name": "Theresa Webb",
-                    "review": "“The smartwatch has been a game-changer for me. From the moment I put it on, I was impressed by its sleek design and intuitive interface. The fitness tracking features are incredibly detailed",
+                    "review": "“The SOS Electronics India smartwatch has been a game-changer for me. From the moment I put it on, I was impressed by its sleek design and intuitive interface. The fitness tracking features are incredibly detailed",
                     "status": true,
                     "image_url": "/images/theme/single_product/testimonials.png"
                 },
                 {
                     "name": "Cody Fisher",
-                    "review": "I was skeptical about getting a smartwatch, but this one exceeded all my expectations. It seamlessly syncs with my phone, delivering notifications and updates right to my wrist.",
+                    "review": "I was skeptical about getting a smartwatch, but SOS Electronics India smartwatch one exceeded all my expectations. It seamlessly syncs with my phone, delivering notifications and updates right to my wrist.",
                     "status": true,
                     "image_url": "/images/theme/single_product/testimonials.png"
                 },
                 {
                     "name": "Robert Fox",
-                    "review": "I love how it tracks my sleep patterns, exercise, and heart rate, providing valuable insights into my health. The notification system is flawless, ensuring I never miss a call or message.",
+                    "review": "I love how SOS Electronics India smartwatch tracks my sleep patterns, exercise, and heart rate, providing valuable insights into my health. The notification system is flawless, ensuring I never miss a call or message.",
                     "status": true,
                     "image_url": "/images/theme/single_product/testimonials.png"
                 },
                 {
                     "name": "Savannah Nguyen",
-                    "review": "As someone who values both functionality and style, this smartwatch ticks all the boxes. The user               interface is incredibly user-friendly, and the customization options allow me to tailor it to my               needs.",
+                    "review": "As someone who values both functionality and style, SOS Electronics India's smartwatch ticks all the boxes. The user               interface is incredibly user-friendly, and the customization options allow me to tailor it to my               needs.",
                     "status": true,
                     "image_url": "/images/theme/single_product/testimonials.png"
                 }
@@ -119,63 +117,63 @@
             388,
             387
         ],
-        "social_media1": {
+        "social_media": {
             "title": "# INSTAGRAM",
             "status": true,
             "banners": [
                 {
                     "status": true,
-                    "image_url": "/images/theme/single_product/social-media.png",
+                    "image_url": "/images/theme/single_product/d_c_1.jpg",
                     "redirect_link": {
-                        "link": "https://instagram.com/",
+                        "link": "https://www.instagram.com/soselectronics.in/",
                         "link_type": "external_url"
                     }
                 },
                 {
                     "status": true,
-                    "image_url": "/images/theme/single_product/social-media.png",
+                    "image_url": "/images/theme/single_product/d_c_2.jpg",
                     "redirect_link": {
-                        "link": "https://instagram.com/",
+                        "link": "https://www.instagram.com/soselectronics.in/",
                         "link_type": "external_url"
                     }
                 },
                 {
                     "status": true,
-                    "image_url": "/images/theme/single_product/social-media.png",
+                    "image_url": "/images/theme/single_product/d_c_3.jpg",
                     "redirect_link": {
-                        "link": "https://instagram.com/",
+                        "link": "https://www.instagram.com/soselectronics.in/",
                         "link_type": "external_url"
                     }
                 },
                 {
                     "status": true,
-                    "image_url": "/images/theme/single_product/social-media.png",
+                    "image_url": "/images/theme/single_product/d_c_3.jpg",
                     "redirect_link": {
-                        "link": "https://instagram.com/",
+                        "link": "https://www.instagram.com/soselectronics.in/",
                         "link_type": "external_url"
                     }
                 },
                 {
                     "status": true,
-                    "image_url": "/images/theme/single_product/social-media.png",
+                    "image_url": "/images/theme/single_product/d_c_4.jpg",
                     "redirect_link": {
-                        "link": "https://instagram.com/",
+                        "link": "https://www.instagram.com/soselectronics.in/",
                         "link_type": "external_url"
                     }
                 },
                 {
                     "status": true,
-                    "image_url": "/images/theme/single_product/social-media.png",
+                    "image_url": "/images/theme/single_product/d_c_5.jpg",
                     "redirect_link": {
-                        "link": "https://instagram.com/",
+                        "link": "https://www.instagram.com/soselectronics.in/",
                         "link_type": "external_url"
                     }
                 },
                 {
                     "status": true,
-                    "image_url": "/images/theme/single_product/social-media.png",
+                    "image_url": "/images/theme/single_product/d_c_6.jpg",
                     "redirect_link": {
-                        "link": "https://instagram.com/",
+                        "link": "https://www.instagram.com/soselectronics.in/",
                         "link_type": "external_url"
                     }
                 }

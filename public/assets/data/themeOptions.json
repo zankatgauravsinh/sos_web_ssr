@@ -66,11 +66,11 @@
         },
         "popup": {
             "auth": {
-                "image_url": "/images/placeholder/auth.png"
+                "image_url": "/images/placeholder/logo_2.png"
             },
             "exit": {
                 "title": "WAIT",
-                "image_url": "/images/placeholder/auth.png",
+                "image_url": "/images/placeholder/logo_2.png",
                 "is_enable": true,
                 "sub_title": "Sorry to see you leaving...",
                 "description": "Enter your email address to receive 10% off your first order"
@@ -82,7 +82,7 @@
             "news_letter": {
                 "offer": "80% off",
                 "title": "NEWSLETTER",
-                "image_url": "/images/placeholder/auth.png",
+                "image_url": "/images/placeholder/logo_2.png",
                 "is_enable": true,
                 "description": "plus, early access to new arrivals, exclusive sales, & lots more?"
             }

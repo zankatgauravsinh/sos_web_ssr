@@ -1,7 +1,7 @@
 @if(type == 'button_link'){
   @if(data?.redirect_link?.link_type === 'external_url'){
     @if(data?.redirect_link?.link){
-      <a href="{{ data?.redirect_link?.link }}" [class]="class">{{ data.button_text }}</a>
+      <a target="_blank" href="{{ data?.redirect_link?.link }}" [class]="class">{{ data.button_text }}</a>
     }@else {
       <a href="javascript:void(0)" [class]="class">{{ data.button_text }}</a>
     }

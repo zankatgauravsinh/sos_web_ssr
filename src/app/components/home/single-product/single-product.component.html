@@ -133,7 +133,7 @@
           <div class="col-xl-4 col-sm-6">
             <div class="comment-box">
               <div class="profile-name">
-                <img [src]="StorageURL+testimonial.image_url" class="img-fluid" alt="">
+                <!-- <img [src]="StorageURL+testimonial.image_url" class="img-fluid" alt=""> -->
                 <h4>{{ testimonial.name }}</h4>
               </div>
               <div class="profile-detail">
@@ -159,9 +159,9 @@
   <!-- Social Media Section End -->
   
   <!-- Brand Section Start -->
-  @if(data?.content?.brand?.status){
+  <!-- @if(data?.content?.brand?.status){
     <section class="section-b-space single-brand-section">
-      <!-- <app-theme-brand [brandIds]="data?.content?.brand?.brand_ids || []"></app-theme-brand> -->
+      <app-theme-brand [brandIds]="data?.content?.brand?.brand_ids || []"></app-theme-brand>
     </section>
-  }
+  } -->
   <!-- Brand Section End -->
