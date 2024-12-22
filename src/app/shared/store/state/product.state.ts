@@ -12,7 +12,6 @@ import { ThemeOptionService } from "../../services/theme-option.service";
 import { GetCategoryProducts, GetMenuProducts, GetMoreProduct, GetProductByIds, GetProductBySearch,
          GetProductBySearchList,
          GetProductBySlug, GetProducts, GetRelatedProducts, GetStoreProducts } from "../action/product.action";
-import { Category } from "../../interface/category.interface";
 
 export class ProductStateModel {
   product = {

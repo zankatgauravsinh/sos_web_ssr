@@ -1,4 +1,3 @@
-import { Attachment } from "./attachment.interface";
 import { Banners } from "./theme.interface";
 
 export interface ThemeOptionStateModel{
@@ -34,9 +33,9 @@ export interface Logo {
    header_logo_id: number;
    footer_logo_id: number;
    favicon_icon_id: number;
-   favicon_icon: Attachment;
-   header_logo: Attachment;
-   footer_logo: Attachment;
+   favicon_icon: any;
+   header_logo: any;
+   footer_logo: any;
 }
 
 export interface General {
@@ -65,7 +64,7 @@ export interface SEO {
    og_title: string;
    og_description: string;
    og_image_id: number;
-   og_image: Attachment;
+   og_image: any;
 }
 
 export interface Header {

@@ -1,5 +1,3 @@
-import { Attachment } from "./attachment.interface";
-import { Currency } from "./currency.interface";
 
 export interface Setting {
    id?: number;
@@ -46,10 +44,10 @@ export interface Twilio {
 }
 
 export interface General {
-   light_logo_image?: Attachment;
-   dark_logo_image?: Attachment;
-   favicon_image?: Attachment;
-   tiny_logo_image?: Attachment;
+   light_logo_image?: any;
+   dark_logo_image?: any;
+   favicon_image?: any;
+   tiny_logo_image?: any;
    light_logo_image_id?: number;
    dark_logo_image_id?: number;
    tiny_logo_image_id?: number;
@@ -64,7 +62,7 @@ export interface General {
    min_order_amount:number;
    min_order_free_shipping:number;
    product_sku_prefix: string;
-   default_currency: Currency;
+   default_currency: any;
    mode: string;
    copyright: string;
 }
@@ -142,7 +140,7 @@ export interface Maintenance {
    title: string;
    maintenance_mode: boolean;
    maintenance_image_id: number;
-   maintenance_image: Attachment;
+   maintenance_image: any;
    description: string;
    start_date: string;
    end_date: string;

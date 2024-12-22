@@ -1,12 +1,5 @@
 import { PaginateModel } from "./core.interface";
-import { Attachment } from "./attachment.interface";
-import { Attribute, AttributeValue } from "./attribute.interface";
-import { Category } from "./category.interface";
-import { Stores } from "./store.interface";
-import { Tag } from "./tag.interface";
-import { Tax } from "./tax.interface";
-import { Review } from "./review.interface";
-import { Brand } from "./brand.interface";
+
 
 export interface ProductModel extends PaginateModel {
     data: Product[];
@@ -19,16 +12,16 @@ export interface Product {
     name: string;
     slug: string;
     brand_id: number | null;
-    brand: Brand;
+    brand: any;
     selected_variant?: Variation;
     product_type?: string;
     short_description: string;
     description: string;
     type: string;
     product_thumbnail_id?: number;
-    product_thumbnail?: Attachment;
+    product_thumbnail?: any;
     product_galleries_id?: [];
-    product_galleries?: Attachment[];
+    product_galleries?: any[];
     unit: string;
     weight: number;
     price: number;
@@ -44,13 +37,13 @@ export interface Product {
     visible_time: string;
     quantity: number;
     preview_type: string | null;
-    preview_audio_file: Attachment | null;
+    preview_audio_file: any | null;
     preview_audio_file_id: number | null;
-    preview_video_file: Attachment | null;
+    preview_video_file: any | null;
     preview_video_file_id: number | null;
     store_id?: number;
     size_chart_image_id: number;
-    size_chart_image: Attachment;
+    size_chart_image: any;
     estimated_delivery_text: string;
     return_policy_text: string;
     safe_checkout: boolean;
@@ -65,17 +58,17 @@ export interface Product {
     is_return: boolean | number;
     shipping_days: number | null;
     tax_id: number;
-    tax: Tax;
+    tax: any;
     status: boolean;
     meta_title: string;
     meta_description: string;
-    product_meta_image: Attachment;
+    product_meta_image: any;
     product_meta_image_id: number;
-    tags: Tag[];
-    tag: Tag;
-    categories: Category[];
-    category: Category;
-    store?: Stores;
+    tags: any[];
+    tag: any;
+    categories: any[];
+    category: any;
+    store?: any;
     store_name?: string;
     orders_count: string | number;
     order_amount: string | number;
@@ -84,7 +77,7 @@ export interface Product {
     wholesale_price_type: string | null;
     wholesales: WholesalePrice[];
     variants: Variant[];
-    attributes: Attribute[];
+    attributes: any[];
     attributes_ids: number[];
     is_random_related_products: boolean;
     is_external: boolean;
@@ -97,12 +90,12 @@ export interface Product {
     is_approved: boolean;
     total_in_approved_products: number;
     published_at: string;
-    reviews: Review[];
+    reviews: any[];
     reviews_count: number;
     wishlist_name: string;
     rating_count: number;
     review_ratings: number[];
-    user_review: Review;
+    user_review: any;
     can_review: boolean;
     created_at?: string;
     updated_at?: string;
@@ -131,12 +124,12 @@ export interface Variation {
     sku: string;
     discount: number;
     quantity: number;
-    variation_image: Attachment;
+    variation_image: any;
     variation_image_id: number;
     variation_options: VariationOption[];
     variation_galleries_id: [];
-    variation_galleries: Attachment[];
-    attribute_values: AttributeValue[];
+    variation_galleries: any[];
+    attribute_values: any[];
     selected_variation: string;
     status: boolean;
 }

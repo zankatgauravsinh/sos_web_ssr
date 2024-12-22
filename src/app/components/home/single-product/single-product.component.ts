@@ -7,7 +7,6 @@ import { environment } from '../../../../environments/environment';
 import { ButtonComponent } from '../../../shared/components/widgets/button/button.component';
 import { ImageLinkComponent } from '../../../shared/components/widgets/image-link/image-link.component';
 import { productSlider4, toolsCategorySlider } from '../../../shared/data/owl-carousel';
-import { Category } from '../../../shared/interface/category.interface';
 import { Banners, FeaturedBanner, SingleProduct, TestimonialBanner } from '../../../shared/interface/theme.interface';
 import { ThemeOptionService } from '../../../shared/services/theme-option.service';
 // import { GetBrands } from '../../../shared/store/action/brand.action';
@@ -32,7 +31,7 @@ export class SingleProductComponent {
   @Input() slug?: string;
   private platformId: boolean;
 
-  public category: Category[];
+  public category: any[];
   public banners: FeaturedBanner[];
   public options = toolsCategorySlider;
   public productSlider4 = productSlider4;
