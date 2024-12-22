@@ -7,10 +7,6 @@ import { Observable } from 'rxjs';
 import { Analytics, Values } from './shared/interface/setting.interface';
 import { Option } from './shared/interface/theme-option.interface';
 import { SeoService } from './shared/services/seo.service';
-import { GetCartItems } from './shared/store/action/cart.action';
-import { GetCompare } from './shared/store/action/compare.action';
-import { GetCountries } from './shared/store/action/country.action';
-import { GetCurrencies } from './shared/store/action/currency.action';
 import { GetSettingOption } from './shared/store/action/setting.action';
 import { GetStates } from './shared/store/action/state.action';
 import { GetThemes } from './shared/store/action/theme.action';
@@ -45,13 +41,6 @@ export class AppComponent {
 
     config.max = 5;
     config.readonly = true;
-    this.store.dispatch(new GetCountries());
-    this.store.dispatch(new GetStates());
-    this.store.dispatch(new GetCartItems());
-    this.store.dispatch(new GetCompare());
-     this.store.dispatch(new GetCurrencies({ status: 1 }));
-    this.store.dispatch(new GetThemes());
-
     this.store.dispatch(new GetSettingOption());
     this.setting$.subscribe(option => {
       this.maintenance_mode = option && option.maintenance && option.maintenance.maintenance_mode;

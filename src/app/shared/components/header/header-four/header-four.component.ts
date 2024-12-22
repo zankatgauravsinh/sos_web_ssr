@@ -1,22 +1,17 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { Option } from '../../../interface/theme-option.interface';
 import { CommonModule } from '@angular/common';
-import { MenuComponent } from '../../widgets/menu/menu.component';
 import { HeaderLogoComponent } from '../widgets/header-logo/header-logo.component';
-import { SettingsComponent } from '../widgets/settings/settings.component';
-import { CartComponent } from '../widgets/cart/cart.component';
-import { SearchComponent } from '../widgets/search/search.component';
-import { UserProfileComponent } from '../widgets/user-profile/user-profile.component';
+
 import { RouterModule } from '@angular/router';
 import { TopBarComponent } from '../../widgets/top-bar/top-bar.component';
-import { MenuService } from '../../../services/menu.service';
+// import { MenuService } from '../../../services/menu.service';
 
 @Component({
   selector: 'app-header-four',
   standalone: true,
-  imports: [CommonModule, RouterModule,MenuComponent,
-            HeaderLogoComponent,SettingsComponent, CartComponent,
-            SearchComponent, UserProfileComponent, TopBarComponent],
+  imports: [CommonModule, RouterModule,
+            HeaderLogoComponent, TopBarComponent],
   templateUrl: './header-four.component.html',
   styleUrl: './header-four.component.scss'
 })
@@ -29,7 +24,7 @@ export class HeaderFourComponent {
 
   public stick: boolean = false;
 
-  constructor(private menuService: MenuService){}
+  constructor(){}
   // @HostListener Decorator
   @HostListener("window:scroll", [])
   onWindowScroll() {
@@ -41,7 +36,5 @@ export class HeaderFourComponent {
     }
   }
 
-  mainMenuOpen(){
-    this.menuService.mainMenuToggle = true;
-  }
+
 }

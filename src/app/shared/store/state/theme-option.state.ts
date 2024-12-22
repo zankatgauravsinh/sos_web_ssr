@@ -50,22 +50,22 @@ export class ThemeOptionState{
   }
 
   @Action(ThemeOptions)
-  getThemeOptions(ctx: StateContext<ThemeOptionStateModel>){
-    return this.themeOptionService.getThemeOption().pipe(
-      tap({
-        next: (result: any) => {
-          const state = ctx.getState();
-          ctx.setState({
-            ...state,
-            theme_option: result.options
-          })
-        },
-        error: (err) => {
-          throw new Error(err?.error?.message);
-        },
-      })
-    )
-  }
+  // getThemeOptions(ctx: StateContext<ThemeOptionStateModel>){
+  //   return this.themeOptionService.getThemeOption().pipe(
+  //     tap({
+  //       next: (result: any) => {
+  //         const state = ctx.getState();
+  //         ctx.setState({
+  //           ...state,
+  //           theme_option: result.options
+  //         })
+  //       },
+  //       error: (err) => {
+  //         throw new Error(err?.error?.message);
+  //       },
+  //     })
+  //   )
+  // }
 
   @Action(UpdateSession)
   UpdateSession(ctx: StateContext<ThemeOptionStateModel>, action: UpdateSession) {

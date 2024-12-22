@@ -8,12 +8,11 @@ import { ThemeOptionState } from '../../store/state/theme-option.state';
 import { ThemeState } from '../../store/state/theme.state';
 
 import { HeaderFourComponent } from './header-four/header-four.component';
-import { MobileMenuComponent } from './widgets/mobile-menu/mobile-menu.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule,  HeaderFourComponent, MobileMenuComponent],
+  imports: [CommonModule,  HeaderFourComponent],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

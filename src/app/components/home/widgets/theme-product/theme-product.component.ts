@@ -4,7 +4,6 @@ import { CarouselModule, OwlOptions } from 'ngx-owl-carousel-o';
 import { Select } from '@ngxs/store';
 import { Observable } from 'rxjs';
 
-import { ProductBoxComponent } from '../../../../shared/components/widgets/product-box/product-box.component';
 
 import { Product } from '../../../../shared/interface/product.interface';
 import { ProductService } from '../../../../shared/services/product.service';
@@ -16,7 +15,7 @@ import { horizontalProductSlider, productSlider } from '../../../../shared/data/
 @Component({
   selector: 'app-theme-product',
   standalone: true,
-  imports: [CommonModule, ProductBoxComponent, CarouselModule, NoDataComponent],
+  imports: [CommonModule, CarouselModule, NoDataComponent],
   templateUrl: './theme-product.component.html',
   styleUrl: './theme-product.component.scss'
 })

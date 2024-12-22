@@ -2,11 +2,11 @@
     "values": {
         "general": {
             "mode": "light-only",
-            "site_url": "https://angular.pixelstrap.net/multikart-rest/",
-            "copyright": "Copyright 2024 © Multikart theme by pixelstrap",
-            "site_name": "Multikart",
-            "site_title": "Multikart Marketplace: Where Vendors Shine Together",
-            "site_tagline": "Shop Unique, Sell Exceptional – Multikart's Multi-Vendor Universe.",
+            "site_url": "https://soselectronics.in/",
+            "copyright": "Copyright 2024 © SOS Electronics India theme by pixelstrap",
+            "site_name": "SOS Electronics India",
+            "site_title": "SOS Electronics India Marketplace: India's own brand",
+            "site_tagline": "Shop Unique, Sell Exceptional – SOS Electronics India",
             "default_timezone": "Asia/Kolkata",
             "favicon_image_id": 10,
             "min_order_amount": 0,

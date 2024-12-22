@@ -37,27 +37,27 @@ export class SettingState {
   }
 
   @Action(GetSettingOption)
-  getSettingOptions(ctx: StateContext<SettingStateModel>) {
-    return this.settingService.getSettingOption().pipe(
-      tap({
-        next: (result) => {
-          const state = ctx.getState();
+  // getSettingOptions(ctx: StateContext<SettingStateModel>) {
+  //   return this.settingService.getSettingOption().pipe(
+  //     tap({
+  //       next: (result) => {
+  //         const state = ctx.getState();
 
-          if(!state.selectedCurrency && result?.values?.general){
-            state.selectedCurrency = result?.values?.general.default_currency;
-          }
+  //         if(!state.selectedCurrency && result?.values?.general){
+  //           state.selectedCurrency = result?.values?.general.default_currency;
+  //         }
 
-          ctx.patchState({
-            ...state,
-            setting: result.values,
-          });
-        },
-        error: (err) => {
-          throw new Error(err?.error?.message);
-        },
-      })
-    );
-  }
+  //         ctx.patchState({
+  //           ...state,
+  //           setting: result.values,
+  //         });
+  //       },
+  //       error: (err) => {
+  //         throw new Error(err?.error?.message);
+  //       },
+  //     })
+  //   );
+  // }
 
   @Action(SelectedCurrency)
   selectedCurrency(ctx: StateContext<SettingStateModel>, action: SelectedCurrency){

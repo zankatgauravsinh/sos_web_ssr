@@ -8,7 +8,7 @@
               <div class="offer-slider">
                 <div class="sec-1">
                   <div class="product-box2">
-                    <app-product-box [product]="product" [style]="style"></app-product-box>
+                    <!-- <app-product-box [product]="product" [style]="style"></app-product-box> -->
                   </div>
                 </div>
               </div>
@@ -23,7 +23,7 @@
   }@else {
     @if(product_box_style == 'single_product') {
       @for(product of products; track product) {
-        <app-product-box [product]="product" [style]="style" [product_box_style]="product_box_style"></app-product-box>
+        <!-- <app-product-box [product]="product" [style]="style" [product_box_style]="product_box_style"></app-product-box> -->
       }
     }
     @else if(product_box_style == 'horizontal'){
@@ -34,7 +34,7 @@
               <div class="offer-slider">
                 <div class="">
                   <div class="product-box2 product-box">
-                    <app-product-box [product]="product" [style]="style"></app-product-box>
+                    <!-- <app-product-box [product]="product" [style]="style"></app-product-box> -->
                   </div>
                 </div>
               </div>
@@ -48,7 +48,7 @@
     }@else {
       <div>
         @for(product of products; track product){
-          <app-product-box [product]="product" [style]="style"></app-product-box>
+          <!-- <app-product-box [product]="product" [style]="style"></app-product-box> -->
         }@empty {
           <app-no-data
             [text]="'no_product'">
@@ -65,7 +65,7 @@
           @for(product of products; track product){
             <ng-template carouselSlide>
               <div [ngClass]="class">
-                <app-product-box [product]="product" [style]="style"></app-product-box>
+                <!-- <app-product-box [product]="product" [style]="style"></app-product-box> -->
               </div>
             </ng-template>
           }
@@ -81,7 +81,7 @@
     <div [ngClass]="class">
       @for(product of products; track product){
         <div >
-          <app-product-box [product]="product" [style]="style"></app-product-box>
+          <!-- <app-product-box [product]="product" [style]="style"></app-product-box> -->
         </div>
       }
     </div>

@@ -4,8 +4,6 @@ import { ActivatedRoute, NavigationEnd, Params, Router, RouterModule } from '@an
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { Select, Store } from '@ngxs/store';
 import { Observable, forkJoin } from 'rxjs';
-import { FooterComponent } from '../shared/components/footer/footer.component';
-import { HeaderComponent } from '../shared/components/header/header.component';
 import { BackToTopComponent } from '../shared/components/widgets/back-to-top/back-to-top.component';
 import { LoaderComponent } from '../shared/components/widgets/loader/loader.component';
 import { ThemeOptionService } from '../shared/services/theme-option.service';
@@ -13,23 +11,15 @@ import { GetMenu } from '../shared/store/action/menu.action';
 import { ThemeOptions } from '../shared/store/action/theme-option.action';
 import { ThemeOptionState } from '../shared/store/state/theme-option.state';
 import { NewsletterModalComponent } from '../shared/components/widgets/modal/newsletter-modal/newsletter-modal.component';
-import { ExitModalComponent } from '../shared/components/widgets/modal/exit-modal/exit-modal.component';
-import { SaleModalComponent } from '../shared/components/widgets/modal/sale-modal/sale-modal.component';
-import { GetProductBySearch, GetProductBySearchList } from '../shared/store/action/product.action';
-import { LoginModalComponent } from '../shared/components/widgets/modal/login-modal/login-modal.component';
-import { AuthService } from '../shared/services/auth.service';
-import { RecentPurchasePopupComponent } from '../shared/components/widgets/recent-purchase-popup/recent-purchase-popup.component';
-import { StickyCompareComponent } from '../shared/components/widgets/sticky-compare/sticky-compare.component';
 import { Option } from '../shared/interface/theme-option.interface';
-import { ThemeCustomizerComponent } from '../shared/components/widgets/theme-customizer/theme-customizer.component';
 import { GetCategories } from '../shared/store/action/category.action';
+import { HeaderComponent } from '../shared/components/header/header.component';
 
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [CommonModule,LoaderComponent, FooterComponent,ThemeCustomizerComponent, RouterModule,LoadingBarRouterModule ,
-            HeaderComponent, BackToTopComponent, StickyCompareComponent, NewsletterModalComponent,
-            RecentPurchasePopupComponent, ExitModalComponent,LoginModalComponent, SaleModalComponent],
+  imports: [CommonModule,LoaderComponent,HeaderComponent, RouterModule,LoadingBarRouterModule ,
+            BackToTopComponent, NewsletterModalComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
@@ -40,8 +30,6 @@ export class LayoutComponent {
   @Select(ThemeOptionState.exit) exit$: Observable<boolean>;
 
   @ViewChild("newsletterModal") NewsletterModal: NewsletterModalComponent;
-  @ViewChild("exitModal") ExitModal: ExitModalComponent;
-  @ViewChild("loginModal") LoginModal: LoginModalComponent;
 
   public cookies: boolean;
   public exit: boolean;
@@ -53,7 +41,6 @@ export class LayoutComponent {
     private route: ActivatedRoute,
     private router: Router,
     public themeOptionService: ThemeOptionService,
-    public authService: AuthService,
     @Inject(PLATFORM_ID) private platformId: Object,) {
       this.isBrowser = isPlatformBrowser(this.platformId);
 
@@ -109,23 +96,13 @@ export class LayoutComponent {
     );
 
     this.themeOptionService.preloader = true;
-    const getProductBySearch$ =this.store.dispatch(new GetProductBySearchList());
     // const getCategories$ = this.store.dispatch(new GetCategories({ status: 1 }));
     const getMenu$ = this.store.dispatch(new GetMenu());
 
-    // getCategories$,
-    forkJoin([getMenu$, getProductBySearch$]).subscribe({
-      complete: () => {
-        this.themeOptionService.preloader = false;
-      }
-    });
+  
   }
 
-  openLoginModal(event: any){
-    if(event){
-      this.LoginModal.openModal();
-    }
-  }
+
 
   setLogo(){
     var headerLogo;

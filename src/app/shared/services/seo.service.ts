@@ -9,11 +9,6 @@ import { Category } from '../interface/category.interface';
 import { Page } from '../interface/page.interface';
 import { Product } from '../interface/product.interface';
 import { Option } from '../interface/theme-option.interface';
-import { BlogState } from '../store/state/blog.state';
-import { BrandState } from '../store/state/brand.state';
-import { CategoryState } from '../store/state/category.state';
-import { PageState } from '../store/state/page.state';
-import { ProductState } from '../store/state/product.state';
 import { ThemeOptionState } from '../store/state/theme-option.state';
 import { SettingState } from '../store/state/setting.state';
 import { Values } from '../interface/setting.interface';
@@ -26,11 +21,6 @@ export class SeoService {
 
   @Select(ThemeOptionState.themeOptions) themeOption$: Observable<Option>;
   @Select(SettingState.setting) setting$: Observable<Values>;
-  @Select(ProductState.selectedProduct) product$: Observable<Product>;
-  @Select(BlogState.selectedBlog) blog$: Observable<Blog>;
-  @Select(BrandState.selectedBrand) brand$: Observable<Brand>;
-  @Select(PageState.selectedPage) page$: Observable<Page>;
-  @Select(CategoryState.selectedCategory) category$: Observable<Category>;
 
   public path: string;
   public timeoutId: any;
@@ -75,11 +65,6 @@ export class SeoService {
 
   fetchData() {
     this.setting$.subscribe(val => this.setting = val);
-    this.product$.subscribe(product => this.product = product);
-    this.blog$.subscribe(blog => this.blog = blog);
-    this.page$.subscribe(page => this.page = page);
-    this.brand$.subscribe(brand => this.brand = brand);
-    this.category$.subscribe(blog => this.category = blog);
     this.themeOption$.subscribe(option => {
       this.themeOption = option
     })

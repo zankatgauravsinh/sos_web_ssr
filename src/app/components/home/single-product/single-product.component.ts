@@ -6,15 +6,12 @@ import { forkJoin, of } from 'rxjs';
 import { environment } from '../../../../environments/environment';
 import { ButtonComponent } from '../../../shared/components/widgets/button/button.component';
 import { ImageLinkComponent } from '../../../shared/components/widgets/image-link/image-link.component';
-import { VideoModalComponent } from '../../../shared/components/widgets/modal/video-modal/video-modal.component';
 import { productSlider4, toolsCategorySlider } from '../../../shared/data/owl-carousel';
 import { Category } from '../../../shared/interface/category.interface';
 import { Banners, FeaturedBanner, SingleProduct, TestimonialBanner } from '../../../shared/interface/theme.interface';
 import { ThemeOptionService } from '../../../shared/services/theme-option.service';
 import { GetBrands } from '../../../shared/store/action/brand.action';
 import { GetProductByIds } from '../../../shared/store/action/product.action';
-import { ThemeBrandComponent } from '../widgets/theme-brand/theme-brand.component';
-import { ThemeHomeSliderComponent } from '../widgets/theme-home-slider/theme-home-slider.component';
 import { ThemeProductComponent } from '../widgets/theme-product/theme-product.component';
 import { ThemeSocialMediaComponent } from '../widgets/theme-social-media/theme-social-media.component';
 import { ThemeTitleComponent } from '../widgets/theme-title/theme-title.component';
@@ -22,9 +19,9 @@ import { ThemeTitleComponent } from '../widgets/theme-title/theme-title.componen
 @Component({
   selector: 'app-single-product',
   standalone: true,
-  imports: [CommonModule, ThemeHomeSliderComponent, ImageLinkComponent,
-    VideoModalComponent, ThemeTitleComponent, ThemeProductComponent,
-    ThemeSocialMediaComponent, ThemeBrandComponent, ButtonComponent
+  imports: [CommonModule, ImageLinkComponent,
+     ThemeTitleComponent, ThemeProductComponent,
+    ThemeSocialMediaComponent, ButtonComponent
   ],
   templateUrl: './single-product.component.html',
   styleUrl: './single-product.component.scss'
@@ -117,9 +114,9 @@ export class SingleProductComponent {
   }
 
   openModal(url: string, type: string) {
-    const modal = this.modal.open(VideoModalComponent, { centered: true, size: 'lg', windowClass: 'theme-modal-2' });
-    modal.componentInstance.video_url = url;
-    modal.componentInstance.type = type;
+    // const modal = this.modal.open(VideoModalComponent, { centered: true, size: 'lg', windowClass: 'theme-modal-2' });
+    // modal.componentInstance.video_url = url;
+    // modal.componentInstance.type = type;
   }
 
   ngOnDestroy() {
