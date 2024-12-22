@@ -5,7 +5,6 @@ import { Observable } from 'rxjs';
 import { breadcrumb } from '../../../shared/interface/breadcrumb.interface';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Option, Contact } from '../../../shared/interface/theme-option.interface';
-import { ContactUs } from '../../../shared/store/action/page.action';
 import { CommonModule } from '@angular/common';
 import { BreadcrumbComponent } from '../../../shared/components/widgets/breadcrumb/breadcrumb.component';
 import { ButtonComponent } from '../../../shared/components/widgets/button/button.component';
@@ -47,11 +46,7 @@ export class ContactUsComponent {
   submit(){
     this.form.markAllAsTouched();
     if (this.form.valid) {
-      this.store.dispatch(new ContactUs(this.form.value)).subscribe({
-        complete: ()=>{
-          this.form.reset();
-        }
-      })
+      
     }
   }
 }

@@ -7,12 +7,10 @@ import { Observable, forkJoin } from 'rxjs';
 import { BackToTopComponent } from '../shared/components/widgets/back-to-top/back-to-top.component';
 import { LoaderComponent } from '../shared/components/widgets/loader/loader.component';
 import { ThemeOptionService } from '../shared/services/theme-option.service';
-import { GetMenu } from '../shared/store/action/menu.action';
 import { ThemeOptions } from '../shared/store/action/theme-option.action';
 import { ThemeOptionState } from '../shared/store/state/theme-option.state';
 import { NewsletterModalComponent } from '../shared/components/widgets/modal/newsletter-modal/newsletter-modal.component';
 import { Option } from '../shared/interface/theme-option.interface';
-import { GetCategories } from '../shared/store/action/category.action';
 import { HeaderComponent } from '../shared/components/header/header.component';
 
 @Component({
@@ -97,7 +95,7 @@ export class LayoutComponent {
 
     this.themeOptionService.preloader = true;
     // const getCategories$ = this.store.dispatch(new GetCategories({ status: 1 }));
-    const getMenu$ = this.store.dispatch(new GetMenu());
+    // const getMenu$ = this.store.dispatch(new GetMenu());
 
   
   }

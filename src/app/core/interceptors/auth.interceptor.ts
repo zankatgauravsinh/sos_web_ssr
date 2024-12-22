@@ -5,7 +5,6 @@ import { Select, Store } from '@ngxs/store';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Values } from '../../shared/interface/setting.interface';
-import { AuthClear } from '../../shared/store/action/auth.action';
 import { SettingState } from '../../shared/store/state/setting.state';
 
 @Injectable()
@@ -46,7 +45,7 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       catchError((error: HttpErrorResponse) => {
         if (error.status === 401) {
-          this.store.dispatch(new AuthClear());
+          // this.store.dispatch(new AuthClear());
 
         }
         return throwError(() => error);

@@ -5,7 +5,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { Select, Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 import { Option } from '../../../../interface/theme-option.interface';
-import { Subscription } from '../../../../store/action/subscription.action';
 import { UpdateSession } from '../../../../store/action/theme-option.action';
 import { ThemeOptionState } from '../../../../store/state/theme-option.state';
 import { ButtonComponent } from '../../button/button.component';
@@ -96,7 +95,7 @@ export class NewsletterModalComponent {
     this.isSubmit = true;
     this.newsLetterForm.markAllAsTouched();
     if(this.newsLetterForm.valid){
-      this.store.dispatch(new Subscription(this.newsLetterForm.value!))
+      // this.store.dispatch(new Subscription(this.newsLetterForm.value!))
       this.newsLetterForm.reset();
       this.isSubmit = false;
     }

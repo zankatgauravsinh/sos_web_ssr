@@ -10,7 +10,7 @@ import { productSlider4, toolsCategorySlider } from '../../../shared/data/owl-ca
 import { Category } from '../../../shared/interface/category.interface';
 import { Banners, FeaturedBanner, SingleProduct, TestimonialBanner } from '../../../shared/interface/theme.interface';
 import { ThemeOptionService } from '../../../shared/services/theme-option.service';
-import { GetBrands } from '../../../shared/store/action/brand.action';
+// import { GetBrands } from '../../../shared/store/action/brand.action';
 import { GetProductByIds } from '../../../shared/store/action/product.action';
 import { ThemeProductComponent } from '../widgets/theme-product/theme-product.component';
 import { ThemeSocialMediaComponent } from '../widgets/theme-social-media/theme-social-media.component';
@@ -66,10 +66,7 @@ export class SingleProductComponent {
       // Get Brand
       let getBrands$;
       if (this.data?.content?.brand?.brand_ids.length && this.data?.content?.brand?.status) {
-        getBrands$ = this.store.dispatch(new GetBrands({
-          status: 1,
-          ids: this.data?.content?.brand?.brand_ids?.join(',')
-        }));
+        getBrands$ = [];
       } else {
         getBrands$ = of(null);
       }

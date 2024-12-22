@@ -5,7 +5,7 @@ import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
 
 // import { LoginModalComponent } from '../../shared/components/widgets/modal/login-modal/login-modal.component';
-import { GetUserDetails } from '../../shared/store/action/account.action';
+// import { GetUserDetails } from '../../shared/store/action/account.action';
 
 @Injectable({
   providedIn: 'root'
@@ -32,11 +32,11 @@ export class AuthGuard{
       is_redirect = true
     }
 
-    this.store.dispatch(new GetUserDetails()).subscribe({
-      complete: () => {
-        return true;
-      }
-    });
+    // this.store.dispatch(new GetUserDetails()).subscribe({
+    //   complete: () => {
+    //     return true;
+    //   }
+    // });
 
     return is_redirect;
   }

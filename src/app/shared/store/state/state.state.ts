@@ -6,7 +6,6 @@ import { States } from "../../interface/state.interface";
 
 import { StateService } from "../../services/state.service";
 
-import { GetStates } from "../action/state.action";
 
 export class StateStateModel {
   state = {
@@ -46,8 +45,7 @@ export class StateState {
     };
   }
 
-  @Action(GetStates)
-  getStates(ctx: StateContext<StateStateModel>, action: GetStates) {
+  getStates(ctx: StateContext<StateStateModel>, action: any) {
     const state = ctx.getState();
     if (state?.state?.data?.length) {
       // If the state has been already loaded
