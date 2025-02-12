@@ -52,8 +52,8 @@ export class AppComponent {
     })
 
     this.themeOption$.subscribe(theme => {
-      this.meta.updateTag({ name: 'title', content: theme?.seo?.meta_title || 'sdsff'});
-      this.meta.updateTag({ name: 'description', content: theme?.seo?.meta_description });
+      this.meta.updateTag({ name: 'title', content: theme?.seo?.meta_title || 'SOS Electronics India| Mobile Accesories'});
+      this.meta.updateTag({ name: 'description', content: theme?.seo?.meta_description || 'SOS Electronics India is a leading mobile accessories company committed to delivering high-quality and innovative products for modern smartphone users. With a diverse range of accessories, including chargers, earphones, power banks, data cables, and more, SOS Electronics India ensures superior performance, durability, and affordability. The company focuses on cutting-edge technology and customer satisfaction, making it a trusted name in the mobile accessories industry. Whether for daily use or high-performance needs, SOS Electronics India provides reliable solutions designed to enhance the mobile experience.' });
       // Set Mode
       if(theme?.general?.mode === 'dark') {
         document.body.classList.add(theme?.general && theme?.general?.mode)
